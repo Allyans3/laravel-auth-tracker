@@ -14,7 +14,7 @@ trait HasUuid
         if (config('auth_tracker.id_type') === 'uuid')
             static::creating(function ($model) {
                 if (empty($model->{$model->getKeyName()})) {
-                    $model->{$model->getKeyName()} = Str::uuid4()->toString();
+                    $model->{$model->getKeyName()} = Str::uuid()->toString();
                 }
             });
     }
