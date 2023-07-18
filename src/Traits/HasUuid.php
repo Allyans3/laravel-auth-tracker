@@ -9,10 +9,8 @@ trait HasUuid
     /**
      * Boot function from Laravel.
      */
-    protected static function boot()
+    protected static function bootHasUuid()
     {
-        parent::boot();
-
         if (config('auth_tracker.id_type') === 'uuid')
             static::creating(function ($model) {
                 if (empty($model->{$model->getKeyName()})) {
