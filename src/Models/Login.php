@@ -3,6 +3,7 @@
 namespace ALajusticia\AuthTracker\Models;
 
 use ALajusticia\AuthTracker\Scopes\LoginsScope;
+use ALajusticia\AuthTracker\Traits\HasUuid;
 use ALajusticia\AuthTracker\Traits\ManagesLogins;
 use ALajusticia\Expirable\Traits\Expirable;
 use Illuminate\Database\Eloquent\Model;
@@ -13,6 +14,7 @@ class Login extends Model
     use Expirable;
     use ManagesLogins;
     use SoftDeletes;
+    use HasUuid;
 
     const EXPIRES_AT = 'expires_at';
 
