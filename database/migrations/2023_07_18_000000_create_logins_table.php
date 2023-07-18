@@ -15,10 +15,10 @@ class CreateLoginsTable extends Migration
     {
         Schema::create(config('auth_tracker.table_name'), function (Blueprint $table) {
             if (config('auth_tracker.id_type') === 'uuid') {
-                $table->uuid();
+                $table->uuid('id')->primary();
                 $table->uuidMorphs('authenticatable');
             } else {
-                $table->id();
+                $table->id()->primary();
                 $table->morphs('authenticatable');
             }
 
