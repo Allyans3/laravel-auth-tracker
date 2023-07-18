@@ -1,13 +1,10 @@
 {
-    "name": "alajusticia/laravel-auth-tracker",
+    "name": "allyans3/laravel-auth-tracker",
     "description": "Track and manage sessions, Passport tokens and Sanctum tokens in Laravel.",
     "license": "MIT",
     "authors": [
         {
-            "name": "Anthony Lajusticia",
-            "email": "anthonylajusticia@gmail.com",
-            "homepage": "https://anthonylajusticia.com",
-            "role": "Developer"
+            "name": "Oleksandr Alcantara"
         }
     ],
     "require": {
